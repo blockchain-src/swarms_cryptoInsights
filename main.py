@@ -4,11 +4,21 @@ from agents.onchain_agent import OnChainAnalyticsAgent
 from agents.report_agent import ReportGenerator
 from utils.plot_tools import plot_news_trend, plot_sentiment_distribution, plot_onchain_activity
 from datetime import datetime
+from dotenv import load_dotenv
+import os
+
+# 加载 .env 文件中的环境变量
+load_dotenv()
 
 if __name__ == "__main__":
+    # 从环境变量获取 Twitter API 密钥
+    twitter_api_key = os.getenv("TWITTER_API_KEY")
+    if not twitter_api_key:
+        raise EnvironmentError("Twitter API Key 未配置，请在 .env 文件中设置 TWITTER_API_KEY")
+
     # 初始化代理
     news_agent = NewsAgent()
-    social_media_agent = SocialMediaAgent(api_key="your_twitter_api_key")
+    social_media_agent = SocialMediaAgent(api_key=twitter_api_key)
     onchain_agent = OnChainAnalyticsAgent()
     report_generator = ReportGenerator()
 
