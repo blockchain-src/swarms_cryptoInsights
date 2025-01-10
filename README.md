@@ -44,7 +44,7 @@
 2. 创建并激活虚拟环境：
 
    ```bash
-   python3 -m venv swarms_env && source swarms_env/bin/activate
+   sudo apt install python3.12-venv -y && python3 -m venv swarms_env && source swarms_env/bin/activate
    ```
 
 3. 一键安装依赖：
