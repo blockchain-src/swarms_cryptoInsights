@@ -15,7 +15,7 @@ class SocialMediaAgent:
         self.api_key = api_key
 
     def analyze_sentiments(self, keyword):
-        # 假设这是一个调用 Twitter API 的方法
+        # 这是一个调用 Twitter API 的方法
         response = requests.get(f"https://api.twitter.com/2/tweets/search/recent?query={keyword}", headers={
             "Authorization": f"Bearer {self.api_key}"
         })
