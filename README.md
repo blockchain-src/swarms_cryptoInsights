@@ -50,14 +50,13 @@
 3. 一键安装依赖：
 
    ```bash
-   pip install -r requirements.txtchmod +x install.sh && ./install.sh
+   chmod +x install.sh && ./install.sh
    ```
 
 4. 配置环境变量：
-   在项目根目录创建一个 `.env` 文件，并添加以下内容：
 
-   ```env
-   TWITTER_API_KEY=your_twitter_api_key
+   ```bash
+   echo 'TWITTER_API_KEY=your_twitter_api_key' >> .env
    ```
 
 ## **使用方法**
@@ -67,7 +66,7 @@
 执行主脚本以收集数据、进行分析并生成报告：
 
 ```bash
-python main.py
+python3 main.py
 ```
 
 ### 输出
