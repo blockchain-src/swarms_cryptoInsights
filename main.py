@@ -2,7 +2,7 @@ from agents.news_agent import NewsAgent
 from agents.social_media_agent import SocialMediaAgent
 from agents.onchain_agent import OnChainAnalyticsAgent
 from agents.report_agent import ReportGenerator
-from utils.plot_tools import plot_news_trend, plot_sentiment_distribution, plot_onchain_activity
+from utils.plot_tools import plot_news_trend, plot_sentiment_distribution, plot_chain_activity
 from datetime import datetime
 from dotenv import load_dotenv
 import os
